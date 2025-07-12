@@ -1,12 +1,20 @@
 # app.py
+import os
 import torch
 import torch.nn as nn
 import streamlit as st
 from transformers import BertTokenizerFast, BertModel
 from model import BERT_Arch  # import your class definition here
 import time
+from download_model import download_model
+
 # Load model
 model_path = 'model.pt'
+
+
+if not os.path.exists(model_path):
+    download_model(model_path)
+
 
 bert = BertModel.from_pretrained('bert-base-uncased')
 tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
