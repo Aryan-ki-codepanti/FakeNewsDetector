@@ -1,3 +1,8 @@
 venv
 notes.txt
 A.py
+*.pt
+ogMain.py
+self-notes
+__pycache__
+.DS_Store
