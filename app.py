@@ -12,6 +12,10 @@ from download_model import download_model
 model_path = 'model.pt'
 
 
+st.set_page_config(
+    page_title="Fake News Detector - Know if its true", page_icon="📰")
+
+
 if not os.path.exists(model_path):
     download_model(model_path)
 
@@ -25,6 +29,7 @@ model.load_state_dict(torch.load(
 model.eval()
 
 st.title("📰 Fake News Detector (BERT Based)")
+
 user_input = st.text_area("Enter News Headline or Sentence")
 
 if st.button("Predict"):
