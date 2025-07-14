@@ -1,12 +1,14 @@
 # app.py
-import os
-import torch
-import torch.nn as nn
-import streamlit as st
-from transformers import BertTokenizerFast, BertModel
-from model import BERT_Arch  # import your class definition here
-import time
 from download_model import download_model
+import time
+from model import BERT_Arch  # import your class definition here
+from transformers import BertTokenizerFast, BertModel
+import streamlit as st
+import torch.nn as nn
+import torch
+import os
+os.environ["PYTORCH_USE_SDP"] = "0"  # Disable scaled_dot_product_attention
+
 
 # Load model
 model_path = 'model.pt'
