@@ -2,7 +2,7 @@
 
 This project is a **deep learning-based web application** that detects whether a news headline is _Fake_ or _Real_, using a fine-tuned [BERT (Bidirectional Encoder Representations from Transformers)](https://huggingface.co/bert-base-uncased) model.
 
-Built with **PyTorch**, **Hugging Face Transformers**, and **Streamlit**, the app is deployed on [Hugging Face Spaces](https://huggingface.co/spaces).
+Built with **PyTorch**, **Hugging Face Transformers**, and **Streamlit**, the app is deployed on [Streamlit cloud](https://share.streamlit.io/).
 
 ---
 
